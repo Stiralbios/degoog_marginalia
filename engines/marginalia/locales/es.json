@@ -1,0 +1,20 @@
+{
+  "engine-marginalia": {
+    "name": "Marginalia",
+    "description": "Búsqueda en el índice independiente Marginalia a través de su API JSON pública.",
+    "settings": {
+      "apiKey": {
+        "label": "Clave API",
+        "description": "Tu clave API de Marginalia. Las claves públicas no son compatibles; solicita una en https://about.marginalia-search.com/article/api/"
+      },
+      "baseUrl": {
+        "label": "URL de la API de Marginalia",
+        "description": "URL base de la API de Marginalia (predeterminado: https://api2.marginalia-search.com)."
+      },
+      "filterName": {
+        "label": "Filtro personalizado",
+        "description": "Nombre opcional de un filtro personalizado subido a tu clave API."
+      }
+    }
+  }
+}

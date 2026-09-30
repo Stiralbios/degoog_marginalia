@@ -1,0 +1,17 @@
+{
+  "name": "degoog_marginalia",
+  "description": "Marginalia Search engine for degoog.",
+  "author": "Stiralbios",
+  "scripts": {
+    "test": "node scripts/verify-repository.mjs"
+  },
+  "engines": [
+    {
+      "path": "engines/marginalia",
+      "name": "Marginalia",
+      "description": "Search the independent Marginalia index through its public JSON API. An API key is required.",
+      "version": "1.0.0"
+    }
+  ],
+  "type": "module"
+}
