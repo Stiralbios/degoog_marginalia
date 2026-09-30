@@ -40,14 +40,6 @@ The test suite checks request building, result mapping, blank-query handling, mi
 
 ## How this repository was made
 
-This repository was **vibe-coded**: I described the goal, inspected the existing conventions in `../degoog-toolkit` and the upstream SearXNG `marginalia.py` engine, and iteratively generated the engine, tests, and packaging until the tests passed.
+This repository was **vibe-coded**: the goal was described, then the existing conventions in `../degoog-toolkit` and SearXNG's `marginalia.py` engine were used as references to generate the engine, tests, and packaging. One import path fix later, all 9 tests passed.
 
-Process snapshot:
-1. **Read the references** — looked at how `degoog-toolkit` engines declare settings, handle `context.fetch`, send `API-Key` headers, and write `*.test.mjs` tests.
-2. **Mirrored SearXNG's API shape** — used the same `api2.marginalia-search.com` endpoint, query params (`query`, `page`, `count`, `nsfw`, `filter`), and JSON result fields (`title`, `url`, `description`).
-3. **Implemented the engine** — wrote `engines/marginalia/index.js` with required `apiKey`, optional `baseUrl`, optional `filterName`, and degoog-style error handling.
-4. **Wrote tests** — copied the testing patterns from `degoog-toolkit` (mock `fetch`, `sentinel`, `engineError`, abort/cancellation cases) and adjusted them for Marginalia's response shape.
-5. **Ran and fixed** — tests failed at first due to a bad relative import path; fixed `./engines/marginalia/index.js` to `./marginalia/index.js`, reran, and all 9 tests passed.
-6. **Committed and pushed** — the repository was committed and pushed to `main`.
-
-If you find a bug, open an issue or PR. This engine is intentionally small and stays close to Marginalia's public API.
+If you find a bug, open an issue or PR.
